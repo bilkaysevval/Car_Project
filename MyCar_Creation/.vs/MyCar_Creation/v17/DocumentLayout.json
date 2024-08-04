@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\github_projects\\Car_Project\\MyCar_Creation\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{C496FFFB-0872-4EF9-9001-E6CA5E1CDBD7}|MyCar_Creation\\MyCar_Creation.csproj|c:\\github_projects\\car_project\\mycar_creation\\mycar_creation\\controllers\\vehiclecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C496FFFB-0872-4EF9-9001-E6CA5E1CDBD7}|MyCar_Creation\\MyCar_Creation.csproj|solutionrelative:mycar_creation\\controllers\\vehiclecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C496FFFB-0872-4EF9-9001-E6CA5E1CDBD7}|MyCar_Creation\\MyCar_Creation.csproj|c:\\github_projects\\car_project\\mycar_creation\\mycar_creation\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C496FFFB-0872-4EF9-9001-E6CA5E1CDBD7}|MyCar_Creation\\MyCar_Creation.csproj|solutionrelative:mycar_creation\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -48,7 +52,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -60,7 +64,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "ApplicationDbContext.cs",
               "DocumentMoniker": "C:\\github_projects\\Car_Project\\MyCar_Creation\\MyCar_Creation\\Context\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "MyCar_Creation\\Context\\ApplicationDbContext.cs",
@@ -68,11 +72,12 @@
               "RelativeToolTip": "MyCar_Creation\\Context\\ApplicationDbContext.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-04T15:38:42.575Z"
+              "WhenOpened": "2024-08-04T15:38:42.575Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "ApplicationDbContextModelSnapshot.cs",
               "DocumentMoniker": "C:\\github_projects\\Car_Project\\MyCar_Creation\\MyCar_Creation\\Migrations\\ApplicationDbContextModelSnapshot.cs",
               "RelativeDocumentMoniker": "MyCar_Creation\\Migrations\\ApplicationDbContextModelSnapshot.cs",
@@ -80,11 +85,12 @@
               "RelativeToolTip": "MyCar_Creation\\Migrations\\ApplicationDbContextModelSnapshot.cs",
               "ViewState": "AQIAACgAAAAAAAAAAAAgwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-04T15:38:31.874Z"
+              "WhenOpened": "2024-08-04T15:38:31.874Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "BaseModel.cs",
               "DocumentMoniker": "C:\\github_projects\\Car_Project\\MyCar_Creation\\MyCar_Creation\\Model\\BaseModel.cs",
               "RelativeDocumentMoniker": "MyCar_Creation\\Model\\BaseModel.cs",
@@ -92,11 +98,12 @@
               "RelativeToolTip": "MyCar_Creation\\Model\\BaseModel.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-04T15:36:26.982Z"
+              "WhenOpened": "2024-08-04T15:36:26.982Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "dbo.Categories [Data]",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/MyVipCars/True/SqlTable/dbo.Categories.sql",
               "ToolTip": "dbo.Categories [Data]",
@@ -105,20 +112,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "CategoryController.cs",
               "DocumentMoniker": "C:\\github_projects\\Car_Project\\MyCar_Creation\\MyCar_Creation\\Controllers\\CategoryController.cs",
               "RelativeDocumentMoniker": "MyCar_Creation\\Controllers\\CategoryController.cs",
               "ToolTip": "C:\\github_projects\\Car_Project\\MyCar_Creation\\MyCar_Creation\\Controllers\\CategoryController.cs",
               "RelativeToolTip": "MyCar_Creation\\Controllers\\CategoryController.cs",
-              "ViewState": "AQIAADcAAAAAAAAAAAAgwEsAAAAAAAAA",
+              "ViewState": "AQIAACEAAAAAAAAAAAAAAEsAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-25T10:13:40.819Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 0,
+              "Title": "VehicleController.cs",
+              "DocumentMoniker": "C:\\github_projects\\Car_Project\\MyCar_Creation\\MyCar_Creation\\Controllers\\VehicleController.cs",
+              "RelativeDocumentMoniker": "MyCar_Creation\\Controllers\\VehicleController.cs",
+              "ToolTip": "C:\\github_projects\\Car_Project\\MyCar_Creation\\MyCar_Creation\\Controllers\\VehicleController.cs",
+              "RelativeToolTip": "MyCar_Creation\\Controllers\\VehicleController.cs",
+              "ViewState": "AQIAADMAAAAAAAAAAAAiwEkAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-25T11:07:41.089Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "dbo.Vehicles [Data]",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/MyVipCars/True/SqlTable/dbo.Vehicles.sql",
               "ToolTip": "dbo.Vehicles [Data]",
@@ -127,7 +147,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Category.cs",
               "DocumentMoniker": "C:\\github_projects\\Car_Project\\MyCar_Creation\\MyCar_Creation\\Entities\\Category.cs",
               "RelativeDocumentMoniker": "MyCar_Creation\\Entities\\Category.cs",
@@ -135,11 +155,12 @@
               "RelativeToolTip": "MyCar_Creation\\Entities\\Category.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-25T13:30:10.488Z"
+              "WhenOpened": "2024-07-25T13:30:10.488Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "Vehicle.cs",
               "DocumentMoniker": "C:\\github_projects\\Car_Project\\MyCar_Creation\\MyCar_Creation\\Entities\\Vehicle.cs",
               "RelativeDocumentMoniker": "MyCar_Creation\\Entities\\Vehicle.cs",
@@ -147,11 +168,12 @@
               "RelativeToolTip": "MyCar_Creation\\Entities\\Vehicle.cs",
               "ViewState": "AQIAAAMAAAAAAAAAAAAqwA8AAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-25T11:41:52.249Z"
+              "WhenOpened": "2024-07-25T11:41:52.249Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "VehicleDTO.cs",
               "DocumentMoniker": "C:\\github_projects\\Car_Project\\MyCar_Creation\\MyCar_Creation\\Dtos\\VehicleDTO.cs",
               "RelativeDocumentMoniker": "MyCar_Creation\\Dtos\\VehicleDTO.cs",
@@ -159,11 +181,12 @@
               "RelativeToolTip": "MyCar_Creation\\Dtos\\VehicleDTO.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-25T11:10:10.359Z"
+              "WhenOpened": "2024-07-25T11:10:10.359Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "CategoryDTO.cs",
               "DocumentMoniker": "C:\\github_projects\\Car_Project\\MyCar_Creation\\MyCar_Creation\\Dtos\\CategoryDTO.cs",
               "RelativeDocumentMoniker": "MyCar_Creation\\Dtos\\CategoryDTO.cs",
@@ -171,7 +194,8 @@
               "RelativeToolTip": "MyCar_Creation\\Dtos\\CategoryDTO.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-24T19:25:28.242Z"
+              "WhenOpened": "2024-07-24T19:25:28.242Z",
+              "EditorCaption": ""
             }
           ]
         }
