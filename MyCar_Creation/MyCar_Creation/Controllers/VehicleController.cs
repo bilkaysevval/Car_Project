@@ -88,6 +88,15 @@ namespace MyCar_Creation.Controllers
 			}
 			return NotFound();
 		}
-		
+		[HttpGet("{categoryId}")]
+		public ActionResult GetVehiclesByCategoryId([FromRoute] Guid categoryId)
+		{
+			List<Vehicle> vehicles = _context.Vehicles.Where(x => x.CategoryId == categoryId).ToList();
+			if(vehicles is not null)
+			{
+				return Ok(vehicles);
+			}
+			return NotFound();
+		}
 	}
 }

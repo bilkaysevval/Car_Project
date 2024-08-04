@@ -55,7 +55,7 @@ namespace MyCar_Creation.Controllers
 			{
 				return Ok(categories);
 			}
-			return NotFound();
+			return BadRequest();
 		}
 		[HttpPut("{categoryId}")]
 		public ActionResult UpdateCategory([FromRoute] Guid categoryId, CategoryDTO model)
@@ -73,15 +73,8 @@ namespace MyCar_Creation.Controllers
 			return NotFound();
 		}
 		
-		[HttpGet("GetVehiclesByCategoryId/{categoryId}")]
-		public ActionResult GetVehiclesByCategoryId([FromRoute] string categoryId)
-		{
-			var res = _context.Categories.Include(x => x.Vehicles).FirstOrDefault(x => x.Id == Guid.Parse(categoryId));
-			if (res is not null)
-			{
-				return Ok(res);
-			}
-			return NotFound();
-		}
+
 	}
 }
+
+

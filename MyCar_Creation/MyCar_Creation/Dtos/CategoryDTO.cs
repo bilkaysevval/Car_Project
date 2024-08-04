@@ -4,6 +4,5 @@
 	{
 		public string CategoryName { get; set; }
 		public string CategoryDescription { get; set; }
-		public int VehicleCount { get; set; }
 	}
 }
