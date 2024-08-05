@@ -1,9 +1,9 @@
-import { createApi, fetchBaseQuery } from '@reduxjs/toolkit'
+import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
 export const categoryAPI = createApi({
     reducerPath: "categoryApi",
     baseQuery: fetchBaseQuery({
-        baseUrl: '',
+        baseUrl: 'https://550d-88-245-17-236.ngrok-free.app/api/',
     }),
     endpoints: (builder) => ({
         GetAllCategory: builder.query({
