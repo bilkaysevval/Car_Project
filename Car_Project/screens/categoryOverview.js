@@ -1,5 +1,6 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import CategoryList from "./categoryList";
+import CategoryItem from "./categoryItem";
 
 export default function CategoryOverview() {
     const Stack = createNativeStackNavigator();

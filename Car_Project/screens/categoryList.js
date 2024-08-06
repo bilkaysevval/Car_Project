@@ -6,6 +6,14 @@ function CategoryList() {
 
     const { data, isLoading } = useGetAllCategoryQuery();
 
+    if (isLoading) {
+        return (
+            <View>
+                <Text>loading</Text>
+            </View>
+        )
+    }
+
     console.log("data")
     console.log(data)
     if (!data) {
