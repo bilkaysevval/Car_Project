@@ -3,7 +3,7 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 export const categoryAPI = createApi({
     reducerPath: "categoryApi",
     baseQuery: fetchBaseQuery({
-        baseUrl: 'https://7b7f-88-245-17-97.ngrok-free.app/api/',
+        baseUrl: 'https://f7f7-78-174-202-29.ngrok-free.app/api/',
     }),
     endpoints: (builder) => ({
         GetAllCategory: builder.query({
@@ -33,14 +33,14 @@ export const categoryAPI = createApi({
                 body: model.categoryModel
             })
         }),
-        GetVehiclesByCategoryId: builder.query({
-            query: (categoryId) => ({
-                url: `Category/GetVehiclesByCategoryId/${categoryId}`,
-                method: "GET"
-            })
-        })
+        // GetVehiclesByCategoryId: builder.query({
+        //     query: (categoryId) => ({
+        //         url: `Category/GetVehiclesByCategoryId/${categoryId}`,
+        //         method: "GET"
+        //     })
+        // })
     })
 })
 
-export const { useGetAllCategoryQuery, useCreateCategoryMutation, useRemoveCategoryMutation, useUpdateCategoryMutation, useGetVehiclesByCategoryIdQuery } = categoryAPI
+export const { useGetAllCategoryQuery, useCreateCategoryMutation, useRemoveCategoryMutation, useUpdateCategoryMutation } = categoryAPI
 export default categoryAPI

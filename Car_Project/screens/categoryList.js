@@ -14,11 +14,9 @@ function CategoryList() {
         )
     }
 
-    console.log("data")
+    console.log("from category list")
     console.log(data)
-    if (!data) {
-        return null;
-    }
+
 
     return (
         <>
