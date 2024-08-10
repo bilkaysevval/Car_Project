@@ -1,5 +1,6 @@
 import { Text, View, StyleSheet, FlatList, Image, TouchableOpacity } from 'react-native'
 import { useGetVehiclesByCategoryIdQuery } from '../../APIs/vehicleAPI';
+import { useNavigation } from '@react-navigation/native'
 
 function Vehicles({ route, navigation }) {
 
@@ -12,6 +13,14 @@ function Vehicles({ route, navigation }) {
                     <Text>vehicles are loading</Text></View></>
         )
     }
+    const vehicleNavigation = useNavigation();
+    const handleClick = (id) => {
+        console.log("pressed")
+        vehicleNavigation.navigate('Vehicle Detail', {
+            vehicleId: id
+        })
+    }
+
     console.log("Clicked")
     console.log("selectedId")
     console.log(selectedCategoryId)
@@ -32,7 +41,7 @@ function Vehicles({ route, navigation }) {
                     data={data}
                     keyExtractor={(item) => item.id.toString()}
                     renderItem={({ item }) => (
-                        <TouchableOpacity style={styles.itemContainer}>
+                        <TouchableOpacity style={styles.itemContainer} onPress={() => handleClick(item.id)}>
                             <Image source={{ uri: item.imageUrl }} style={styles.image}></Image>
                             <View style={styles.textContainer}>
                                 <Text style={styles.brandText}>{item.brand}</Text>
@@ -62,7 +71,9 @@ const styles = StyleSheet.create({
     },
     image: {
         flex: 1,
-        marginLeft: 16
+        marginLeft: 16,
+        width: 50,
+        height: 50
     },
     textContainer: {
         flex: 1,
@@ -74,6 +85,5 @@ const styles = StyleSheet.create({
     },
     modelText: {
         fontSize: 15,
-        color: "light blue"
     }
 })
