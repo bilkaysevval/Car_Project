@@ -3,10 +3,9 @@ import { Text, View, StyleSheet, TextInput } from "react-native";
 import CategoryManage from "./categoryScreens/CategoryManage";
 import VehicleManage from "./vehicleScreens/vehicleManage";
 import Home from "./home";
-import { useState } from "react";
+import React, { useState } from "react";
 import { Button, Modal } from "react-native-paper";
 import Ionicons from 'react-native-vector-icons/Ionicons';
-
 
 function HomePage() {
 
@@ -34,48 +33,58 @@ function HomePage() {
                     }
                 })} options={{
                     tabBarIcon: ({ }) => (
-                        <Ionicons name="albums"></Ionicons>
+                        <Ionicons name="albums" size={20} />
                     )
                 }} />
                 <Tab.Screen name="Home" component={Home} options={{
                     tabBarIcon: ({ }) => (
-                        <Ionicons name="home"></Ionicons>
+                        <Ionicons name="home" size={20} />
                     )
                 }} />
                 <Tab.Screen name="VehicleManage" component={VehicleManage} options={{
                     tabBarIcon: ({ }) => (
-                        <Ionicons name="car-sport"></Ionicons>
+                        <Ionicons name="car-sport" size={20} />
                     )
                 }} />
             </Tab.Navigator>
-            <Modal visible={visibleModal} onRequestClose={removeModalClick} animationType="slide" >
-                <View style={styles.viewStyleOne}>
-                    <View style={styles.viewStyleTwo}>
-                        <TextInput placeholder="Enter Your Email" placeholderTextColor={styles.placeholderTextStyle}></TextInput>
-                    </View>
-                    <View style={styles.viewStyleTwo}>
-                        <TextInput placeholder="Enter Your Password" placeholderTextColor={styles.placeholderTextStyle}></TextInput>
-                    </View>
+            <Modal visible={visibleModal} onDismiss={removeModalClick} animationType="slide" contentContainerStyle={styles.modalContainer}>
+                <View style={styles.inputContainer}>
+                    <TextInput placeholder="Enter Your Email" placeholderTextColor="gray" style={styles.input} />
+                    <TextInput placeholder="Enter Your Password" placeholderTextColor="gray" style={styles.input} secureTextEntry />
                 </View>
-                <Button onPress={removeModalClick} title='Close Modal' style={{ width: 40, backgroundColor: "pink" }}></Button>
+                <Button mode="contained-tonal" onPress={removeModalClick} style={styles.modalButton} >
+                    <Text>Close Modal</Text>
+                </Button>
             </Modal>
         </View>
     );
 }
 
-export default HomePage
 const styles = StyleSheet.create({
-    viewStyleOne: {
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-    },
-    viewStyleTwo: {
-        backgroundColor: "blue",
+    modalContainer: {
+        backgroundColor: 'white',
         padding: 20,
-        borderRadius: 20
+        margin: 10,
+        borderRadius: 10,
+        alignItems: 'center',
     },
-    placeholderTextStyle: {
-        color: "black"
-    }
-})
+    inputContainer: {
+        width: '100%',
+        marginBottom: 20,
+    },
+    input: {
+        height: 50,
+        borderColor: '#ccc',
+        borderWidth: 1,
+        borderRadius: 8,
+        paddingHorizontal: 10,
+        marginBottom: 10,
+        width: '100%',
+    },
+    modalButton: {
+        marginTop: 20,
+        backgroundColor: "pink"
+    },
+});
+
+export default HomePage;
