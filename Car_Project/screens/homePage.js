@@ -6,11 +6,13 @@ import Home from "./home";
 import React, { useState } from "react";
 import { Button, Modal } from "react-native-paper";
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import { useCheckTrueAdminMutation } from "../APIs/accountAPI";
 
 function HomePage() {
 
     const Tab = createMaterialBottomTabNavigator();
     const [visibleModal, setVisibleModal] = useState(false);
+    const [CheckTrueAdmin] = useCheckTrueAdminMutation();
     const [userModel, setUserModel] = useState({
         email: "",
         password: ""
@@ -20,8 +22,25 @@ function HomePage() {
         setVisibleModal(true);
     }
 
-    const removeModalClick = () => {
+    const checkRoleButtonClickHandler = () => {
+        const loginModel = {
+            email: userModel.email,
+            password: userModel.password
+        }
+        // var checkResult = CheckTrueAdmin(loginModel)
+        CheckTrueAdmin(loginModel).then((value) => console.log(value))
         setVisibleModal(false);
+    }
+
+    function inputChangeHandler(inputIdentifier, enteredValue) {
+        setUserModel((currentInputValue) => {
+            return {
+                ...currentInputValue,
+                [inputIdentifier]: enteredValue
+            }
+        })
+        console.log("userModel.email")
+        console.log(userModel.email)
     }
 
     return (
@@ -47,13 +66,13 @@ function HomePage() {
                     )
                 }} />
             </Tab.Navigator>
-            <Modal visible={visibleModal} onDismiss={removeModalClick} animationType="slide" contentContainerStyle={styles.modalContainer}>
+            <Modal visible={visibleModal} animationType="slide" contentContainerStyle={styles.modalContainer}>
                 <View style={styles.inputContainer}>
-                    <TextInput placeholder="Enter Your Email" placeholderTextColor="gray" style={styles.input} />
-                    <TextInput placeholder="Enter Your Password" placeholderTextColor="gray" style={styles.input} secureTextEntry />
+                    <TextInput placeholder="Enter Your Email" placeholderTextColor="gray" style={styles.input} onChangeText={inputChangeHandler.bind(this, 'email')} />
+                    <TextInput placeholder="Enter Your Password" placeholderTextColor="gray" style={styles.input} onChangeText={inputChangeHandler.bind(this, 'password')} secureTextEntry />
                 </View>
-                <Button mode="contained-tonal" onPress={removeModalClick} style={styles.modalButton} >
-                    <Text>Close Modal</Text>
+                <Button mode="contained-tonal" onPress={checkRoleButtonClickHandler} style={styles.modalButton} >
+                    <Text>Check Role</Text>
                 </Button>
             </Modal>
         </View>
