@@ -13,10 +13,10 @@ function Vehicles({ route, navigation }) {
                     <Text>vehicles are loading</Text></View></>
         )
     }
-    const vehicleNavigation = useNavigation();
+    // const vehicleNavigation = useNavigation(); use 'navigation' instead of vehicleNavigation
     const handleClick = (id) => {
         console.log("pressed")
-        vehicleNavigation.navigate('Vehicle Detail', {
+        navigation.navigate('Vehicle Detail', {
             vehicleId: id
         })
     }
@@ -27,10 +27,10 @@ function Vehicles({ route, navigation }) {
     console.log("data")
     console.log(data)
     console.log(data[0].imageUrl)
-    if (data == []) {
+    if (!data || data.length === 0) {
         return (
             <>
-
+                <View><Text>No vehicles available</Text></View>
             </>
         )
     }

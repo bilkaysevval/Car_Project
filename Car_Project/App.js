@@ -3,14 +3,25 @@ import { SafeAreaView, Text, StyleSheet } from 'react-native';
 import { Provider } from 'react-redux';
 import { store } from './store/store';
 import { createDrawerNavigator } from '@react-navigation/drawer';
+import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import { NavigationContainer } from '@react-navigation/native';
 import './gesture-handler';
 import HomePage from './screens/homePage';
 import CategoryOverview from './screens/categoryOverview';
+import CategoryManage from './screens/categoryScreens/CategoryManage';
 
 export default function App() {
 
   const Drawer = createDrawerNavigator();
+  // const Tab = createMaterialBottomTabNavigator();
+
+  // function MyTabs() {
+  //   return (
+  //     <Tab.Navigator>
+  //       <Tab.Screen name="CategoryManage" component={CategoryManage} />
+  //     </Tab.Navigator>
+  //   );
+  // }
 
   return (
     <Provider store={store}>

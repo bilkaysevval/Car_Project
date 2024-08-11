@@ -3,7 +3,7 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 export const vehicleAPI = createApi({
     reducerPath: "vehicleApi",
     baseQuery: fetchBaseQuery({
-        baseUrl: 'https://6db9-88-245-17-216.ngrok-free.app/api/',
+        baseUrl: 'https://6b45-78-190-146-168.ngrok-free.app/api/',
     }),
     endpoints: (builder) => ({
         GetAllVehicle: builder.query({
