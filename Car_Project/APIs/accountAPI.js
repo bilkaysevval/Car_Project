@@ -1,9 +1,8 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
-
 export const accountAPI = createApi({
     reducerPath: "accountApi",
     baseQuery: fetchBaseQuery({
-        baseUrl: 'https://6ca5-78-190-146-168.ngrok-free.app/api/',
+        baseUrl: 'https://2f31-78-190-150-104.ngrok-free.app/api/',
     }),
     endpoints: (builder) => ({
         CheckTrueAdmin: builder.mutation({
