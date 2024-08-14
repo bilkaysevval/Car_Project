@@ -1,7 +1,12 @@
 import { Text, View, StyleSheet, FlatList, Image, TouchableOpacity, Alert } from 'react-native'
 import vehicleAPI, { useGetAllVehicleQuery, useRemoveVehicleMutation } from '../../APIs/vehicleAPI';
 import { Button } from 'react-native-paper';
-function VehicleManage({ route, navigation }) {
+import UpdateVehicle from './updateVehicle';
+import CreateVehicle from './createVehicle';
+import { useNavigation } from '@react-navigation/native';
+function VehicleManage({ route }) {
+    const navigation = useNavigation();
+
 
     // const [vehicleModel, setVehicleModel] = useState([]);
     const { data, isLoading } = useGetAllVehicleQuery();
@@ -34,6 +39,12 @@ function VehicleManage({ route, navigation }) {
     //     navigation.navigate("AddOrUpdateVehicle", { vehicleId: vehicleId })
     // };
 
+
+    const updateVehicleHandler = (id) => {
+        console.log('id :>> ', id);
+        navigation.navigate("UpdateVehicle", { vehicleId: id })
+    }
+
     return (
         <View style={styles.container}>
             <FlatList
@@ -48,7 +59,7 @@ function VehicleManage({ route, navigation }) {
                             <Text style={styles.modelText}>{item.model}</Text>
                         </View>
                         <View style={{}}>
-                            <Button mode="contained-tonal" style={styles.updateButton} >
+                            <Button mode="contained-tonal" style={styles.updateButton} onPress={() => updateVehicleHandler(item.id)}>
                                 <Text>Update</Text>
                             </Button>
                             <Button mode="contained-tonal" style={styles.removeButton} onPress={() => removeVehicleHandler(item.id)}>
@@ -57,7 +68,7 @@ function VehicleManage({ route, navigation }) {
                         </View>
                     </TouchableOpacity>
                 )} ></FlatList>
-            <Button mode="contained-tonal" style={styles.createButton} onPress={() => handleAddOrUpdate()}>
+            <Button mode="contained-tonal" style={styles.createButton} onPress={() => CreateVehicle()}>
                 <Text>Create Vehicle</Text>
             </Button>
         </View>
