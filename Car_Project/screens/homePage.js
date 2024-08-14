@@ -8,6 +8,7 @@ import { Button, Modal } from "react-native-paper";
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import { useCheckTrueAdminMutation } from "../APIs/accountAPI";
 import { useNavigation } from "@react-navigation/native";
+import AddOrUpdateVehicle from "./vehicleScreens/addOrUpdateVehicle";
 
 function HomePage() {
 
@@ -75,6 +76,15 @@ function HomePage() {
                         <Ionicons name="albums" size={20} />
                     )
                 }} />
+                {/* <Tab.Screen name="AddOrUpdateVehicle" component={AddOrUpdateVehicle} listeners={({ navigation, route }) => ({
+                    tabPress: (e) => {
+                        handleModalButtonClick();
+                    }
+                })} options={{
+                    tabBarIcon: ({ }) => (
+                        <Ionicons name="car-sport" size={20} />
+                    )
+                }} /> */}
                 <Tab.Screen name="VehicleManage" component={VehicleManage} listeners={({ navigation, route }) => ({
                     tabPress: (e) => {
                         handleModalButtonClick();

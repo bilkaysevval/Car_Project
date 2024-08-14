@@ -3,6 +3,7 @@ import CategoryList from "./categoryList";
 import CategoryItem from "./categoryItem";
 import Vehicles from "./vehicleScreens/Vehicles";
 import VehicleDetail from "./vehicleScreens/VehicleDetail";
+import Temp from "./vehicleScreens/Temp";
 
 export default function CategoryOverview() {
     const Stack = createNativeStackNavigator();
