@@ -4,7 +4,7 @@ import { Button } from 'react-native-paper';
 import UpdateVehicle from './updateVehicle';
 import CreateVehicle from './createVehicle';
 import { useNavigation } from '@react-navigation/native';
-function VehicleManage({ route }) {
+function VehicleManage() {
     const navigation = useNavigation();
 
 

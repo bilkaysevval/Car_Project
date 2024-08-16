@@ -34,6 +34,7 @@ export default function App() {
       </Drawer.Navigator>
     )
   }
+  
   const StackContainer = () => {
     const Stack = createNativeStackNavigator()
     return (
@@ -45,6 +46,7 @@ export default function App() {
       </Stack.Navigator>
     )
   }
+
   return (
     <Provider store={store}>
       <NavigationContainer>

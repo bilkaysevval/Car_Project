@@ -26,7 +26,6 @@ function Vehicles({ route, navigation }) {
     console.log(selectedCategoryId)
     console.log("data")
     console.log(data)
-    console.log(data[0].imageUrl)
     if (!data || data.length === 0) {
         return (
             <>
